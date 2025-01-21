@@ -67,6 +67,7 @@ This project assumes working knowledge of initializing and provisioning resource
 ## Modules
 
 - **logs-api-golang**: Deploys logs-api-go Docker container using the specified image and version.
+- **logs-api-node**: Deploys logs-api-node-container Docker container using the specified image and version.
 
 ## License
 

@@ -12,6 +12,7 @@ data "aws_ami" "amazon_linux_2" {
   }
 }
 
+
 resource "aws_instance" "logs_api_instance" {
   ami           = data.aws_ami.amazon_linux_2.id
   key_name = var.key_name

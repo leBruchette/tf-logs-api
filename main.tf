@@ -23,3 +23,14 @@ module "logs-api-golang" {
   security_group_id = aws_security_group.logs_api_go_sg.id
 }
 
+module "logs-api-node" {
+  source = "./modules/logs-api"
+  image_name = "ghcr.io/lebruchette/logs-api-node"
+  image_version = "latest"
+  port = 82
+  docker_username = "lebruchette"
+  docker_password = local.ghcr_token
+  key_name = aws_key_pair.logs_api_key_pair.key_name
+  security_group_id = aws_security_group.logs_api_go_sg.id
+}
+
